@@ -13,7 +13,7 @@ class Television:
         self.__volume=Television.MIN_VOLUME
         self.__status=False
 
-    def power(self):
+    def power(self) ->bool:
     
         """
         - This method should be used to turn the TV on/off.
@@ -26,7 +26,7 @@ class Television:
             self.__status=False
             return False
 
-    def channel_up(self):
+    def channel_up(self) -> int:
         """
         - This method should be used to adjust the TV channel by incrementing its value.
         :return: The channel of TV.
@@ -38,7 +38,7 @@ class Television:
                 self.__channel+=1
         return self.__channel
 
-    def channel_down(self):
+    def channel_down(self) -> int:
         """
         - This method should be used to adjust the TV channel by decrementing its value.
         :return: The channel of TV.
@@ -50,7 +50,7 @@ class Television:
                 self.__channel-=1
         return self.__channel
 
-    def volume_up(self):
+    def volume_up(self) -> int:
         """
         - This method should be used to adjust the TV volume by incrementing its value.
         :return: The volume of TV.
@@ -64,7 +64,7 @@ class Television:
             
                 
 
-    def volume_down(self):
+    def volume_down(self) -> int:
         """
         - This method should be used to adjust the TV volume by decrementing its value.
         :return: The volume of TV.
@@ -76,7 +76,7 @@ class Television:
                 self.__volume-=1
         return self.__volume
             
-    def __str__(self):
+    def __str__(self) -> str:
         """
         - This method should be used to return the TV status using the format shown in the comments of main.py
         :return: String containing the status, volume, and channel of the TV.
