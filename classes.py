@@ -21,10 +21,8 @@ class Television:
         """
         if self.__status==False:
             self.__status=True
-            return True
         if self.__status==True:
             self.__status=False
-            return False
 
     def channel_up(self) -> int:
         """
@@ -36,7 +34,6 @@ class Television:
                 self.__channel=Television.MIN_CHANNEL
             else:
                 self.__channel+=1
-        return self.__channel
 
     def channel_down(self) -> int:
         """
@@ -48,7 +45,6 @@ class Television:
                 self.__channel=Television.MAX_CHANNEL
             else:
                 self.__channel-=1
-        return self.__channel
 
     def volume_up(self) -> int:
         """
@@ -60,9 +56,6 @@ class Television:
                 self.__volume=Television.MAX_VOLUME
             else:
                 self.__volume+=1
-        return self.__volume
-            
-                
 
     def volume_down(self) -> int:
         """
@@ -74,7 +67,6 @@ class Television:
                 self.__volume=Television.MIN_VOLUME
             else:
                 self.__volume-=1
-        return self.__volume
             
     def __str__(self) -> str:
         """
