@@ -3,7 +3,7 @@ class Television:
     MAX_CHANNEL = 3     # Maximum TV channel 
 
     MIN_VOLUME = 0      # Minimum TV volume
-    MAX_VOLUME = 2      # c TV volume
+    MAX_VOLUME = 2      # Maximum TV volume
 
     def __init__(self) ->None:
         """
@@ -13,17 +13,17 @@ class Television:
         self.__volume=Television.MIN_VOLUME
         self.__status=False
 
-    def power(self) ->bool:
+    def power(self)->None:
     
         """
         - This method should be used to turn the TV on/off.
         """
         if self.__status==False:
             self.__status=True
-        if self.__status==True:
+        elif self.__status==True:
             self.__status=False
 
-    def channel_up(self) -> int:
+    def channel_up(self)->None:
         """
         - This method should be used to adjust the TV channel by incrementing its value.
         """
@@ -33,7 +33,7 @@ class Television:
             else:
                 self.__channel+=1
 
-    def channel_down(self) -> int:
+    def channel_down(self)->None:
         """
         - This method should be used to adjust the TV channel by decrementing its value.
         """
@@ -43,7 +43,7 @@ class Television:
             else:
                 self.__channel-=1
 
-    def volume_up(self) -> int:
+    def volume_up(self) ->None:
         """
         - This method should be used to adjust the TV volume by incrementing its value.
         """
@@ -53,7 +53,7 @@ class Television:
             else:
                 self.__volume+=1
 
-    def volume_down(self) -> int:
+    def volume_down(self) ->None:
         """
         - This method should be used to adjust the TV volume by decrementing its value.
         """
@@ -69,5 +69,8 @@ class Television:
         :return: String containing the status, volume, and channel of the TV.
         """
         return f'TV status: Is on = {self.__status}, Channel = {self.__channel}, Volume = {self.__volume}'
+
+
+
 
 
