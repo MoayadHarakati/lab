@@ -17,7 +17,6 @@ class Television:
     
         """
         - This method should be used to turn the TV on/off.
-        : return: True/False as TV status.
         """
         if self.__status==False:
             self.__status=True
@@ -27,7 +26,6 @@ class Television:
     def channel_up(self) -> int:
         """
         - This method should be used to adjust the TV channel by incrementing its value.
-        :return: The channel of TV.
         """
         if self.__status==True:
             if self.__channel==Television.MAX_CHANNEL:
@@ -38,7 +36,6 @@ class Television:
     def channel_down(self) -> int:
         """
         - This method should be used to adjust the TV channel by decrementing its value.
-        :return: The channel of TV.
         """
         if self.__status==True:
             if self.__channel==Television.MIN_CHANNEL:
@@ -49,7 +46,6 @@ class Television:
     def volume_up(self) -> int:
         """
         - This method should be used to adjust the TV volume by incrementing its value.
-        :return: The volume of TV.
         """
         if self.__status==True:
             if self.__volume==Television.MAX_VOLUME:
@@ -60,7 +56,6 @@ class Television:
     def volume_down(self) -> int:
         """
         - This method should be used to adjust the TV volume by decrementing its value.
-        :return: The volume of TV.
         """
         if self.__status==True:
             if self.__volume==Television.MIN_VOLUME:
